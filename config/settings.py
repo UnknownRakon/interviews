@@ -22,7 +22,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'import_export',
     'simple_history',
-
+    "corsheaders",
     'api',
     'authentication',
 ]
@@ -36,7 +36,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'simple_history.middleware.HistoryRequestMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 ROOT_URLCONF = 'config.urls'
 

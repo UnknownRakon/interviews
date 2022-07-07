@@ -38,7 +38,7 @@ class Finder(models.Model):
 class Vacancy(models.Model):
     company = models.ForeignKey(Employer, verbose_name='Компания', on_delete=models.CASCADE)
     title = models.CharField(verbose_name='Название вакансии', max_length=255)
-    description = models.TextField(verbose_name='Описание вакансии')
+    description = models.TextField(verbose_name='Описание вакансии', null=True, blank=True)
 
     history = HistoricalRecords()
 
